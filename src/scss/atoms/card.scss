@@ -1,0 +1,53 @@
+.teaser-card {
+  position: relative;
+  height: 240px;
+
+  &__media img {
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    background: rgba($color_black, .4);
+    color: $color_white;
+    transition: background-color 250ms linear;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba($color_black, .2);
+    }
+  }
+
+  &__title {
+    font-size: .875rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1rem;
+  }
+
+  @media (min-width: $tablet-min) {
+    height: 480px;
+    flex: 1;
+
+    &__title {
+      padding-bottom: 8rem;
+    }
+
+    &__subtitle {
+      padding-bottom: 2rem;
+    }
+  }
+}

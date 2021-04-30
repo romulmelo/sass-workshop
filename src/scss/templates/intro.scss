@@ -1,0 +1,110 @@
+.intro {
+  position: relative;
+  height: calc(100vh - 72px);
+  width: 100%;
+  background: $color_black;
+  color: $color_white;
+
+  &__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 8vw;
+  }
+
+  &__media img {
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 0 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__subtitle {
+    @extend .text--bold;
+    font-size: 1.5rem;
+    padding-left: .5rem;
+    text-transform: lowercase;
+  }
+
+  &__title {
+    font-size: 3rem;
+    letter-spacing: -.0875rem;
+    text-transform: lowercase;
+  }
+
+  &__title-box {
+    width: fit-content;
+    margin: .75rem 0;
+    padding: .5rem .75rem;
+    border: 4px solid $color_white;
+  }
+
+  &__action {
+    margin-top: 1rem;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+  }
+
+  &__anchor {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  &__anchor-label {
+    @extend .text--bold;
+    display: block;
+    height: 50px;
+    font-size: .875rem;
+    text-transform: uppercase;
+
+    &::before {
+      @extend .intro__anchor;
+      content: '';
+      width: 2px;
+      height: 24px;
+      background: $color_white;
+    }
+  }
+
+  @media (min-width: $tablet-min) {
+
+    &__media img {
+      height: calc(100% - (72px + 1rem));
+    }
+
+    &__subtitle,
+    &__action {
+      padding-left: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 2.5rem;
+    }
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__title-box {
+      margin: 1.25rem 0;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    &__anchor {
+      pointer-events: all;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.grow-relationships {
+  position: relative;
+  display: flex;
+
+  &__container {
+    z-index: 1;
+    padding: 2.5rem 2rem;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    padding-bottom: 2rem;
+  }
+
+  &__description {
+    @extend .text--semibold;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .75rem;
+  }
+
+  &__stripe-box {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 32%;
+    max-width: 560px;
+    background: repeating-linear-gradient(45deg, $color_white, $color_white 10px, $color_gray 8px, $color_gray 14px);
+    background-size: 200% 200%;
+    animation: barberpole 8s linear infinite;
+  }
+
+  @media (min-width: $tablet-min) {
+    width: 80vw;
+    margin: 0 auto;
+
+    &__container {
+      width: 50vw;
+      padding: 5rem 2.5rem;
+    }
+
+    &__description {
+      font-size: 1.2rem;
+    }
+
+    &__buttons {
+      flex-flow: column nowrap;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    height: 800px;
+
+    &__title {
+      font-size: 3.2rem;
+      padding-bottom: 4rem;
+    }
+  }
+}
+
+@keyframes barberpole {
+  100% {
+    background-size: 100% 100%;
+  }
+}

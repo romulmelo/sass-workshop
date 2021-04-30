@@ -1,0 +1,8 @@
+.site-content {
+  margin-top: 72px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-min) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,32 @@
+html,
+body {
+  height: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: $default-font-size;
+  font-display: fallback;
+  background: $color_white;
+  color: $color_black;
+  scroll-behavior: smooth;
+
+  @media (max-width: $tablet-min){
+    font-size: $tablet-font-size;
+  }
+
+  @media (max-width: $mobile-max) {
+    font-size: $mobile-font-size;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}

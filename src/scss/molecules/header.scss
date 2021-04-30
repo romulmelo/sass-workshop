@@ -1,0 +1,41 @@
+.site-header {
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 60%;
+  height: 72px;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  background: $color_black;
+  color: $color_white;
+  user-select: none;
+
+  &__logo {
+    @extend .text--bold;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+  }
+
+  &__greeting {
+    display: none;
+    visibility: hidden;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-right: 12rem;
+  }
+
+  @media (min-width: $tablet-min) {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-left: 3rem;
+    justify-content: space-between;
+
+    &__greeting {
+      display: block;
+      visibility: visible;
+    }
+  }
+}
