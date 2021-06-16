@@ -1,4 +1,4 @@
-# Sass Wokrshop :paintbrush:
+# Sass Workshop :paintbrush:
 Instructional guide for the sass workshop for interns at @valtech.
 
 ## Requirements :brain:
